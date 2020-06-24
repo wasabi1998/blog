@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #子应用的注册
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -130,25 +132,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+#设置静态资源的路径
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Redis缓存配置
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
         'LOCATION': ['redis://127.0.0.1:6379/0'],
-        'KEY_PREFIX': 'session',
+        # 'KEY_PREFIX': 'session',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'CONNECTTON_POOL_KWARGS': {
                 'max_connections': 128,
             },
-            'PASSWORD': '1qaz2wsx',
+            # 'PASSWORD': '1qaz2wsx',
         },
     },
     'session': {
             'BACKEND': 'django_redis.cache.RedisCache',
             'LOCATION': ['redis://127.0.0.1:6379/1'],
-            'KEY_PREFIX': 'session:code',
+            # 'KEY_PREFIX': 'session:code',
             'OPTIONS': {
                 'CLIENT_CLASS': 'django_redis.client.DefaultClient',
                 'CONNECTTON_POOL_KWARGS': {
@@ -238,3 +244,6 @@ LOGGING = {
         }
     },
 }
+#制定系统的User来使用自定义的用户模型类
+#配置信息为’子应用名‘。’模型class类名‘
+AUTH_USER_MODEL = 'users.User'

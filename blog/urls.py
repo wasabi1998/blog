@@ -18,16 +18,25 @@ from django.urls import path
 
 #1.导入系统的logging
 import logging
+
 #2.创建(获取)日志器
 logger = logging.getLogger('djangologger')
+
 #3.使用日志器记录日志信息
 from django.http import HttpResponse
 def log(request):
     logger.info('info')
-    return HttpResponse('test')
+    return HttpResponse('logger testing!')
 
+from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',log),
+    path('log/',log),
+    # include的参数中首先设置一个元组urlconf_module,app_name
+    # urlconf_module 子应用的路由
+    # app_name 子应用的名字
+
+    #namespace
+    path('', include(('users.urls', 'users'), namespace='users')),
 ]
 
