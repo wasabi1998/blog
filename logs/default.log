@@ -12,3 +12,6 @@
 [INFO][2020-06-23 20:35:46,179][Thread-1:14008][task_id:djangologger][urls][urls.py:29][info]
 [INFO][2020-06-23 20:35:46,546][Thread-1:14008][task_id:djangologger][urls][urls.py:29][info]
 [INFO][2020-06-23 20:35:46,725][Thread-1:14008][task_id:djangologger][urls][urls.py:29][info]
+[INFO][2020-06-24 22:07:23,015][Thread-6:11164][task_id:djangologger][views][views.py:98][595768]
+[INFO][2020-06-24 22:09:57,395][Thread-1:10044][task_id:djangologger][views][views.py:98][184692]
+[INFO][2020-06-24 22:13:45,929][Thread-7:7532][task_id:djangologger][views][views.py:98][333985]

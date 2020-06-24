@@ -69,7 +69,6 @@ var vm = new Vue({
             } else {
                 this.password_error = true;
             }
-
         },
         //检查确认密码
         check_password2:function () {
