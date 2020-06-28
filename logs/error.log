@@ -1,0 +1,6 @@
+[ERROR][2020-06-27 08:17:37,927][Thread-1:9660][task_id:djangologger][views][views.py:64][(1062, "Duplicate entry '13545627895' for key 'username'")]
+[ERROR][2020-06-27 08:17:44,990][Thread-1:9660][task_id:djangologger][views][views.py:64][(1062, "Duplicate entry '13545627895' for key 'username'")]
+[ERROR][2020-06-27 08:18:32,242][Thread-1:9660][task_id:djangologger][views][views.py:64][(1062, "Duplicate entry '13545627895' for key 'username'")]
+[ERROR][2020-06-27 18:10:18,691][Thread-10:1780][task_id:djangologger][views][views.py:417][(1406, "Data too long for column 'title' at row 1")]
+[ERROR][2020-06-27 18:10:25,472][Thread-10:1780][task_id:djangologger][views][views.py:417][(1406, "Data too long for column 'title' at row 1")]
+[ERROR][2020-06-27 18:10:37,215][Thread-10:1780][task_id:djangologger][views][views.py:417][(1406, "Data too long for column 'title' at row 1")]

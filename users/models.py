@@ -11,6 +11,12 @@ class User(AbstractUser):
     #间接信息
     user_desc = models.CharField(max_length=500, blank=True)
 
+    #修改认证的字段为手机号
+    USERNAME_FIELD = 'mobile'
+
+    # 创建超级管理员时需要必须设置的字段
+    REQUIRED_FIELDS = ['username', 'email']
+
     class Meta:
         db_table = 'tb_users'
         verbose_name = '用户管理'
